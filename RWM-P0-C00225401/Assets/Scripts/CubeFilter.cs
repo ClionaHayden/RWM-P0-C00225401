@@ -25,7 +25,7 @@ public class CubeFilter
         for (int i = 0; i < xs.Length; i++)
         {
             int multiply;
-            // check for 0
+            // check for 0 
             if (xs[i] > 1)
             {
                 multiply = xs[i] - 1;
@@ -33,6 +33,12 @@ public class CubeFilter
             else
             {
                 multiply = xs[i];
+            }
+
+            //check for negative number, if so make it 0
+            if(xs[i] < 0)
+            {
+                xs[i] = 0;
             }
 
             // calcuate the factorial
